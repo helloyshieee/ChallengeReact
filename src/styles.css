@@ -2,3 +2,19 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+h1 {
+  color: #eeeeee;
+  background-color: #398ab9;
+  padding: 25px;
+  margin-bottom: 0px;
+}
+
+thead {
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}

@@ -1,12 +1,11 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
-
+import ReactDom from "react-dom";
 import App from "./App";
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  rootElement
-);
+(async function () {
+  const response = await fetch(
+    encodeURI("https://data.winnipeg.ca/resource/4her-3th5.json?$limit=15")
+  );
+  const datas = await response.json();
+  const rootElement = document.getElementById("root");
+  ReactDom.render(<App items={datas} />, rootElement);
+})();
